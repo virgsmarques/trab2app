@@ -1,0 +1,7 @@
+{
+  "name": "autenticacao",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

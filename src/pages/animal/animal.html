@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Pedido Regate</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Pedido de resgate</h1>
+  <p>Preencha os campos abaixo para registrar o pedido de resgate</p>
+
+  <ion-item>
+    <ion-label color="dark" stacked>Data do Pedido</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" [(ngModel)]="animal.dataPedido"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="dark" stacked>Nome do efetuante do pedido</ion-label>
+    <ion-input type="text" [(ngModel)]="animal.nome"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="dark" stacked>Número para contato</ion-label>
+    <ion-input type="text" [(ngModel)]="animal.contato"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="dark" stacked>Endereço para resgate:</ion-label>
+    <ion-input type="text" [(ngModel)]="animal.endResgate"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="dark" stacked>Tipo de animal</ion-label>
+    <ion-select [(ngModel)]="animal.tipoAnimal">
+      <ion-option value="G">Gato </ion-option>
+      <ion-option value="C">Cachorro</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="dark" stacked>Gênero do Animal</ion-label>
+    <ion-select [(ngModel)]="animal.sexo">
+      <ion-option value="M">Macho </ion-option>
+      <ion-option value="F">Fêmea</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+      <ion-label color="dark" stacked>Descrição da situação</ion-label>
+      <ion-textarea [(ngModel)]="animal.descricao" placeholder="Descreva mais sobre o caso..."></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <button ion-button color="newColor2" (click)="showConfirm()">Selecione a foto do animal</button>
+</ion-item>
+
+<img [src]="animal.fotoAtual" />
+
+<pre>{{foto}}</pre>
+
+<p>{{foto}}</p>
+
+  <button ion-button full block color="secondary" (click)="save(animal)">
+    Registrar
+  </button>
+
+</ion-content>

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Lista de Pedidos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg">
+
+    <ion-card *ngFor="let a of animais|async">
+      <img src="{{a.foto}}"/>  
+      <ion-card-content>
+        <ion-card-title>Situação: <b>{{a.statusPedido}}</b></ion-card-title>
+        <p>Data do pedido: {{a.dataPedido}}</p>
+        <p><b>Dados da pessoa</b></p>
+        <p>Nome: {{a.nome}} - Telefone: {{a.contato}}</p>
+        <p><b>Dados do animal</b></p>
+        <p>Tipo de animal:{{a.tipoAnimal}} - Sexo: {{a.sexo}}</p>
+        <p><b>Informações adicionais</b></p>
+        <p>{{a.descricao}}</p>
+      </ion-card-content>
+      <ion-row no-padding>
+        <ion-col>
+          <button ion-button clear small color="secondary" icon-start (click)="editar(a)">
+            <ion-icon name='ios-create'></ion-icon>
+            Editar Pedido
+          </button>
+        </ion-col>
+        <ion-col text-center>
+          <button ion-button clear small color="danger" icon-start (click)="delete(a)">
+            <ion-icon name='md-trash'></ion-icon>
+            Apagar
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-content>
+
