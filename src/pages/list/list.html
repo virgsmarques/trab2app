@@ -9,6 +9,11 @@
 
 <ion-content class="cards-bg">
 
+    <ion-item>
+        <ion-label>Filtrar pedidos por pendentes?</ion-label>
+        <ion-toggle color="danger" checked="false"></ion-toggle>
+      </ion-item>
+
     <ion-card *ngFor="let a of animais|async">
       <img src="{{a.foto}}"/>  
       <ion-card-content>
