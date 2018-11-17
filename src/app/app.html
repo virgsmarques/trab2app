@@ -7,12 +7,12 @@
 	
 	<ion-content>
 		<ion-list>
-			<ion-item *ngFor="let p of pages" (click)="openPage(p)">
+			<ion-item class="menuIcons" *ngFor="let p of pages" (click)="openPage(p)">
 				<ion-icon [name]="p.icon" item-left></ion-icon>
 				{{p.title}}
       </ion-item>
       
-      <ion-list-header *ngIf="auth.getEmail()">{{auth.getEmail()}}</ion-list-header>
+      <ion-list-header class="email" *ngIf="auth.getEmail()">E-mail: {{auth.getEmail()}}</ion-list-header>
 
       <ion-item class="logout" (click)="logout()" *ngIf="auth.authenticated">
         <ion-icon name="log-out" item-left></ion-icon>
