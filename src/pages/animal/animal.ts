@@ -23,6 +23,7 @@ export class AnimalPage {
     'tipoAnimal': '', 
     'sexo': '',
     'endResgate':'', // endereço para resgate
+    'statusPedido':'', // status do pedido: pendente ou atendido
     'descricao': '',
     'fotoAtual': ''
   };
