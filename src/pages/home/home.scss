@@ -5,7 +5,7 @@ page-home {
         ion-card {
           position: relative;
           text-align: center;
-          height: 25%;
+          height: 20%;
         }
       
         .card-title {
@@ -16,26 +16,22 @@ page-home {
           font-weight: bold;
           color: #fff;
         }
-      
-        .card-subtitle {
-          font-size: 1.0em;
-          position: absolute;
-          top: 52%;
-          width: 100%;
-          color: #fff;
-        }
+  
       
       }
 
       .card1 {
-        background-color: #346a90;
+        background-color:#3299CC;  
       }
       
       .card2 {
-        background-color: #399034;
+        background-color: #5F9F9F;
       }
 
       .card3 {
-        background-color: #e62828;
+        background-color: #236B8E;
+      }
+      .card4 {
+        background-color: #2F2F4F;
       }
 }
