@@ -11,37 +11,27 @@
     <ion-searchbar (ionInput)="getItems($event)" placeholder="Pesquisar por situação"></ion-searchbar>
 
     <!-- <ion-card *ngFor="let a of animais|async"> -->
-    <ion-card *ngFor="let animal of animalList">
-      <img src="{{animal.foto}}"/>  
+    <ion-card *ngFor="let a of animalList">
+      <img src="{{a.foto}}"/>  
       <ion-card-content>
-        <ion-card-title>Situação: <b>{{animal.statusPedido}}</b></ion-card-title>
-        <p>Data do pedido: {{animal.dataPedido}}</p>
+        <ion-card-title>Situação: <b>{{a.statusPedido}}</b></ion-card-title>
+        <p>Data do pedido: {{a.dataPedido}}</p>
         <p><b>Dados da pessoa</b></p>
-        <p>Nome: {{animal.nome}} - Telefone: {{animal.contato}}</p>
+        <p>Nome: {{a.nome}} - Telefone: {{a.contato}}</p>
         <p><b>Dados do animal</b></p>
-        <p>Tipo de animal:{{animal.tipoAnimal}} - Sexo: {{animal.sexo}}</p>
+        <p>Tipo de animal: {{a.tipoAnimal}} - Sexo: {{a.sexo}}</p>
         <p><b>Informações adicionais</b></p>
-        <p>{{animal.descricao}}</p>
+        <p>{{a.descricao}}</p>
       </ion-card-content>
       <ion-row no-padding>
         <ion-col>
-          <button ion-button clear small color="secondary" icon-start (click)="editar(animal)">
+          <button ion-button clear small color="primary" icon-start (click)="editar(a)">
             <ion-icon name='ios-create'></ion-icon>
             Editar Pedido
-          </button>
-        </ion-col>
-        <ion-col text-center>
-          <button ion-button clear small color="danger" icon-start (click)="showConfirm(a)">
-            <ion-icon name='md-archive'></ion-icon>
-            Arquivar
           </button>
         </ion-col>
       </ion-row>
     </ion-card>
   </ion-content>
   
-  <ion-footer>
-      <ion-toolbar class= "tooblar-total">
-          <p class="totalPedido"><b>Total de pedidos: {{ animais.lenght }}</b></p>
-        </ion-toolbar>
-    </ion-footer>
+ 
