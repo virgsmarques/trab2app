@@ -121,7 +121,9 @@ showConfirm() {
       })
       // this.showAlert();
       this.toastrService.show('Registro realizado com sucesso!', 3000).present();
-        this.navCtrl.setRoot(ListPage);
+      setTimeout(() => {
+        this.navCtrl.setRoot(ListPage);  
+      }, 300);
     },
     error => {
       // ALERT DE QUE DEU ERRO NA FUNÇÃO

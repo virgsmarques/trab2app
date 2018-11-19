@@ -11,7 +11,7 @@ import firebase from 'firebase';
   templateUrl: 'list.html'
 })
 export class ListPage {
-  private animais;
+  public animais = [];
 
   public animalList: Array<any>; // Is to store the list of animals we’re pulling from Firebase.
   public loadeadAnimalList: Array<any>; 
@@ -24,16 +24,18 @@ export class ListPage {
               public firebaseService: FirebaseServiceProvider,
               public toastrService: ToastrServiceProvider
   ) {
-      this.animais =   this.dbService.getAll(); 
-
       this.animalRef = firebase.database().ref('/animais');
 
         this.animalRef.on('value', animalList => { 
           let animais = []; 
-          animalList.forEach( animal => {
-            animais.push(animal.val());
+          animalList.forEach(animal => {
+            animais.push({key: animal.key, ...animal.val()});
             return false;
           }); 
+
+
+          animais.map(a => this.setAnimalPhoto(a));
+          console.log(animais);
 
           this.animalList = animais; 
           this.loadeadAnimalList = animais;
@@ -66,6 +68,13 @@ export class ListPage {
     });
 
     console.log(q, this.animalList.length);
+  }
+
+  setAnimalPhoto(animal){
+    return firebase.storage().ref('/image/' + animal.key).getDownloadURL().then(response => {
+      animal.foto = response
+      console.log(animal);
+    });
   }
 
 

@@ -12,7 +12,7 @@
 
     <!-- <ion-card *ngFor="let a of animais|async"> -->
     <ion-card *ngFor="let a of animalList">
-      <img src="{{a.foto}}"/>  
+      <img style="width: 100px !important;height: 100px;" src="{{a.foto}}"/>  
       <ion-card-content>
         <ion-card-title>Situação: <b>{{a.statusPedido}}</b></ion-card-title>
         <p>Data do pedido: {{a.dataPedido}}</p>
