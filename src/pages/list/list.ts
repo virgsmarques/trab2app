@@ -12,7 +12,7 @@ import firebase from 'firebase';
 })
 export class ListPage {
   public animais = [];
-
+  public qtd : number;
   public animalList: Array<any>; // Is to store the list of animals we’re pulling from Firebase.
   public loadeadAnimalList: Array<any>; 
   public animalRef:firebase.database.Reference; // criação de referencia para puxar do firebase
@@ -39,6 +39,8 @@ export class ListPage {
 
           this.animalList = animais; 
           this.loadeadAnimalList = animais;
+          this.qtd = animalList.numChildren();
+          console.log(animalList.numChildren());
       });
   }
 
