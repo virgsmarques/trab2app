@@ -21,7 +21,8 @@ export class EditPage {
       'sexo': '',
       'endResgate':'', // endereço para resgate
       'descricao': '',
-      'fotoAtual': ''
+      'fotoAtual': '',
+      'statusPedido':'' //se foi atendido ou pendente
     };
 
   constructor(public navCtrl: NavController, 
@@ -39,9 +40,5 @@ export class EditPage {
           this.navCtrl.setRoot(ListPage);
       });
   }
-  // quando alterar registro vibrará
-//   vibrate(){
-//     this.vibration.vibrate(2000);
-//   }
-// 
+
 }

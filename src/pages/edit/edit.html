@@ -49,15 +49,11 @@
       <ion-label color="dark" stacked>Status do Pedido</ion-label>
       <ion-select [(ngModel)]="animal.statusPedido">
         <ion-option value="Atendido">Atendido</ion-option>
-        <ion-option disabled value="Pendente">Pendente</ion-option>
+        <ion-option value="Pendente">Pendente</ion-option>
       </ion-select>
     </ion-item>
 
-  <button ion-button full block color="primary" (click)="update(animal)">
+  <button ion-button full block color="danger" (click)="update(animal)">
     Alterar registro
   </button>
-
 </ion-content>  
-
-
-disabled value
