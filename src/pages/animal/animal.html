@@ -53,6 +53,15 @@
   </ion-item>
 
   <ion-item>
+    <ion-label color="dark" stacked>Status do Pedido</ion-label>
+    <ion-select [(ngModel)]="animal.statusPedido">
+      <ion-option value="Atendido">Atendido</ion-option>
+      <ion-option value="Pendente">Pendente</ion-option>
+    </ion-select>
+  </ion-item>
+
+
+  <ion-item>
     <button ion-button color="newColor2" (click)="showConfirm()">Selecione a foto do animal</button>
 </ion-item>
 
