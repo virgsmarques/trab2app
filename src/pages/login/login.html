@@ -1,6 +1,5 @@
 <ion-content>
-	<img class="iconImg" src="assets/imgs/veterinarian.png"/>
-	<h3 class="tituloApp" style="text-align:center">Pedido Amigo</h3>
+	<img class="iconImg" src="assets/imgs/logo1.png"/>
 	<form (ngSubmit)="login()" [formGroup]="loginForm">
 		<ion-list inset>
 
@@ -13,7 +12,7 @@
 			</div>
 
 			<ion-item [ngClass]="{ invalid: passwordErrors.hasError('*', ['touched']) }">
-				<ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+				<ion-input type="password" placeholder="Senha" formControlName="password"></ion-input>
 			</ion-item>
 
 			<div ngxErrors="password" #passwordErrors="ngxErrors">
@@ -24,7 +23,9 @@
 		<div padding-horizontal>
 			<div class="form-error">{{loginError}}</div>
 
-			<button ion-button full type="submit" [disabled]="!loginForm.valid">Log in</button>
+			<!-- <button ion-button full type="submit" [disabled]="!loginForm.valid">Log in</button> -->
+			<button ion-button round full type="submit" [disabled]="!loginForm.valid">Log in</button>
+
 			<div class="login-footer">
 				<p>
 					É novo por aqui? Registra-se!

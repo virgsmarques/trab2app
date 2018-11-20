@@ -5,14 +5,13 @@
 </ion-header>
 
 <ion-content>
-		<img class="iconImg" src="assets/imgs/veterinarian.png"/>
-		<h3 class="tituloApp" style="text-align:center">Pedido Amigo</h3>>
+		<img class="iconImg" src="assets/imgs/logo1.png"/>
 
 	<form (ngSubmit)="signup()" [formGroup]="form">
 		<ion-list inset>
 
 			<ion-item [ngClass]="{ invalid: emailErrors.hasError('*', ['touched']) }">
-				<ion-input type="text" placeholder="E-mail" formControlName="email"></ion-input>
+				<ion-input type="text" placeholder="Insira um E-mail" formControlName="email"></ion-input>
 			</ion-item>
 
 			<div ngxErrors="email" #emailErrors="ngxErrors">
@@ -20,22 +19,19 @@
 			</div>
 
 			<ion-item [ngClass]="{ invalid: passwordErrors.hasError('*', ['touched']) }">
-				<ion-input type="password" placeholder="Senha" formControlName="password"></ion-input>
+				<ion-input type="password" placeholder="Digite uma Senha" formControlName="password"></ion-input>
 			</ion-item>
 
 			<div ngxErrors="password" #passwordErrors="ngxErrors">
 				<div [ngxError]="['minlength', 'required']" [when]="['touched']">Deve ter no mínimo 6 caracteres!</div>
 			</div>
 
-			<ion-item [ngClass]="{ invalid: passwordErrors.hasError('*', ['touched']) }">
-					<ion-input type="password" placeholder="Confirmar Senha" formControlName="passwordConfirm"></ion-input>
-				</ion-item>
 		</ion-list>
 
 		<div padding-horizontal>
 			<div class="form-error">{{signupError}}</div>
 
-			<button ion-button full type="submit" [disabled]="!form.valid">Sign up</button>
+			<button ion-button full type="submit" [disabled]="!form.valid">Registra-se!</button>
 		</div>
 	</form>
 </ion-content>
