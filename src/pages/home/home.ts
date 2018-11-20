@@ -12,6 +12,8 @@ export class HomePage {
 
   public animais = [];
   public qtdTotal : number; // numero total de registros 
+  qtdPendente : number = 0;
+  qtdAtendido : number = 0;
 
   public animalList: Array<any>; // Is to store the list of animals we’re pulling from Firebase.
   public loadeadAnimalList: Array<any>; 
@@ -33,6 +35,15 @@ export class HomePage {
           this.loadeadAnimalList = animais;
           this.qtdTotal = animalList.numChildren();
           console.log(animalList.numChildren());
+
+          this.animalList.forEach(animal => {
+            if(animal.statusPedido == 'Atendido'){
+              this.qtdAtendido++;
+            }
+            if (animal.statusPedido == 'Pendente'){
+              this.qtdPendente++;
+            }
+          })
       });
 
   }
