@@ -86,8 +86,8 @@
     <plugin name="cordova-plugin-photo-library" spec="^2.1.1">
         <variable name="PHOTO_LIBRARY_USAGE_DESCRIPTION" value="To choose photos" />
     </plugin>
-    <engine name="android" spec="7.1.2" />
     <plugin name="phonegap-plugin-push" spec="~2.2.3">
         <variable name="SENDER_ID" value="150222369178" />
     </plugin>
+    <engine name="android" spec="7.1.2" />
 </widget>

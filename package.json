@@ -33,14 +33,17 @@
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-file": "^5.0.0",
     "cordova-plugin-ionic-keyboard": "^2.1.3",
-    "cordova-plugin-ionic-webview": "^2.2.3",
+    "cordova-plugin-ionic-webview": "^2.2.5",
     "cordova-plugin-photo-library": "^2.1.1",
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-statusbar": "^2.4.2",
     "cordova-plugin-whitelist": "^1.3.3",
+    "cordova-support-google-services": "^1.1.0",
     "firebase": "^4.12.1",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
+    "phonegap-plugin-multidex": "^1.0.0",
+    "phonegap-plugin-push": "^2.2.3",
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
     "zone.js": "0.8.26"
@@ -63,7 +66,12 @@
       "cordova-plugin-ionic-webview": {
         "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
       },
-      "cordova-plugin-ionic-keyboard": {}
+      "cordova-plugin-ionic-keyboard": {},
+      "phonegap-plugin-push": {
+        "SENDER_ID": "150222369178",
+        "ANDROID_SUPPORT_V13_VERSION": "27.+",
+        "FCM_VERSION": "11.6.2"
+      }
     },
     "platforms": [
       "android"
