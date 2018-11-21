@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "150222369178",
+    "firebase_url": "https://trab-tai-42f93.firebaseio.com",
+    "project_id": "trab-tai-42f93",
+    "storage_bucket": "trab-tai-42f93.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:150222369178:android:5240d14d8e246dd0",
+        "android_client_info": {
+          "package_name": "com.trab2app.ionic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "150222369178-r7meshlbnv4o892jfgino5q973smris4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRd7i0gTLKHhrfOhNCnA_jKJ64HWPD9wM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:150222369178:android:22466002cfe4977e",
+        "android_client_info": {
+          "package_name": "com.virgmarques.testepushionic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "150222369178-r7meshlbnv4o892jfgino5q973smris4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRd7i0gTLKHhrfOhNCnA_jKJ64HWPD9wM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
