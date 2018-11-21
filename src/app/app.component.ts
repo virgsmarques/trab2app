@@ -22,8 +22,8 @@ export class MyApp {
 
   pages: Array<{icon:string, title: string, component: any}>;
 
-  constructor(public platform: Platform, 
-              public statusBar: StatusBar, 
+  constructor(public platform: Platform,
+              public statusBar: StatusBar,
               public splashScreen: SplashScreen,
               private auth: AuthService,
               private menu: MenuController
@@ -34,7 +34,7 @@ export class MyApp {
     this.pages = [
       { icon:'md-home', title: 'Tela Principal', component: HomePage },
       { icon:'md-paw', title: 'Pedido de Resgate', component: AnimalPage},
-      { icon:'md-list-box', title: 'Lista de Registros', component: ListPage } 
+      { icon:'md-list-box', title: 'Lista de Registros', component: ListPage }
     ];
 
   }
@@ -43,7 +43,7 @@ export class MyApp {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
     });
-  
+
     this.auth.afAuth.authState
       .subscribe(
         user => {

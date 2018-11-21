@@ -4,26 +4,26 @@
 			<ion-title>Menu</ion-title>
 		</ion-toolbar>
 	</ion-header>
-	
+
 	<ion-content>
 		<ion-list>
-			<ion-item class="menuIcons" *ngFor="let p of pages" (click)="openPage(p)">
+			<ion-item class="menuIcons" *ngFor="let p of pages" (click)="openPage(p)" menuClose>
 				<ion-icon [name]="p.icon" item-left></ion-icon>
 				{{p.title}}
       </ion-item>
-      
+
       <ion-list-header class="email" *ngIf="auth.getEmail()">E-mail: {{auth.getEmail()}}</ion-list-header>
 
       <ion-item class="logout" (click)="logout()" *ngIf="auth.authenticated">
         <ion-icon name="log-out" item-left></ion-icon>
         Log out
       </ion-item>
-        
+
       <ion-item (click)="login()" *ngIf="!auth.authenticated">
         <ion-icon name="log-in" item-left></ion-icon>
         Log in
       </ion-item>
-			
+
 		</ion-list>
 	</ion-content>
 
