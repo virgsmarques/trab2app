@@ -80,45 +80,11 @@ export class ListPage {
   }
 
 
-  // delete(animal){
-  //   this.firebaseService.delete(animal).then(d => {
-  //     this.toastrService.show('Registro excluído com sucesso!', 3000).present();
-  //       this.navCtrl.setRoot(ListPage);
-  //   })
-  // }
-
-  arquivar(){
-   
-      const confirm = this.alertCtrl.create({
-        title: 'Confirmação de arquivamento!',
-        message: 'Ao arquivar você não poderá restaurar esse registro',
-        buttons: [
-          {
-            text: 'Concordo',
-            handler: () => {
-              
-            }
-          },
-          {
-            text: 'Discordo',
-            handler: () => {
-              console.log('Discordo selecionado');
-            }
-          }
-        ]
-      });
-      confirm.present();
-    
-  }
-
   editar(animal){
       this.navCtrl.push(EditPage,{
           'animal': animal
       });
   }
-
-
-
 }
 
   
