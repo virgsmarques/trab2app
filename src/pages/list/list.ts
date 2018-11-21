@@ -37,15 +37,21 @@ export class ListPage {
           animais.map(a => this.setAnimalPhoto(a));
           console.log(animais);
 
-          this.animalList = animais; 
-          this.loadeadAnimalList = animais;
-          this.qtd = animalList.numChildren();
-          console.log(animalList.numChildren());
+          this.animalList = animais.filter(a => a.statusPedido != 'Arquivado'); 
+          this.loadeadAnimalList = animais.filter(a => a.statusPedido != 'Arquivado');
+          this.qtd = this.animalList.length;
       });
   }
 
   initializeItems(){
     this.animalList = this.loadeadAnimalList;
+  }
+
+  arquivar(animal){
+    animal.statusPedido = 'Arquivado';
+    this.firebaseService.update(animal).then(d => {
+      this.toastrService.show('Animal arquivado com sucesso!', 3000).present();
+    });
   }
 
   getItems(searchbar){
@@ -61,7 +67,7 @@ export class ListPage {
     }
 
     this.animalList = this.animalList.filter((v)=> {
-      if(v.statusPedido && q) {
+      if(v.statusPedido && q && !v.arquivado) {
         if (v.statusPedido.toLowerCase().indexOf(q.toLowerCase()) > -1){
           return true
         }

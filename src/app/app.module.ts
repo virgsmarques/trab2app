@@ -28,6 +28,8 @@ import { PhotoLibrary } from '@ionic-native/photo-library';
 import { Camera } from '@ionic-native/camera';
 import { ToastrServiceProvider } from '../providers/toastr-service/toastr-service';
 
+import { Push } from '@ionic-native/push';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -66,7 +68,8 @@ import { ToastrServiceProvider } from '../providers/toastr-service/toastr-servic
     AuthService,
     PhotoLibrary,
     Camera,
-    ToastrServiceProvider
+    ToastrServiceProvider,
+    Push
   ]
 })
 export class AppModule {}

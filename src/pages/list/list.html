@@ -25,8 +25,14 @@
       <ion-row no-padding>
         <ion-col>
           <button ion-button clear small color="primary" icon-start (click)="editar(a)">
-            <ion-icon name='ios-create'></ion-icon>
+            <ion-icon name='create'></ion-icon>
             Editar Pedido
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button clear small color="danger" icon-start (click)="arquivar(a)">
+            <ion-icon name='archive'></ion-icon>
+            Arquivar Pedido
           </button>
         </ion-col>
       </ion-row>
