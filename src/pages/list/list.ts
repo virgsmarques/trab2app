@@ -87,6 +87,30 @@ export class ListPage {
   //   })
   // }
 
+  arquivar(){
+   
+      const confirm = this.alertCtrl.create({
+        title: 'Confirmação de arquivamento!',
+        message: 'Ao arquivar você não poderá restaurar esse registro',
+        buttons: [
+          {
+            text: 'Concordo',
+            handler: () => {
+              
+            }
+          },
+          {
+            text: 'Discordo',
+            handler: () => {
+              console.log('Discordo selecionado');
+            }
+          }
+        ]
+      });
+      confirm.present();
+    
+  }
+
   editar(animal){
       this.navCtrl.push(EditPage,{
           'animal': animal
