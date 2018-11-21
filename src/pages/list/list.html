@@ -9,7 +9,6 @@
 
 <ion-content class="cards-bg">
     <ion-searchbar (ionInput)="getItems($event)" placeholder="Pesquisar por situação"></ion-searchbar>
-
     <!-- <ion-card *ngFor="let a of animais|async"> -->
     <ion-card *ngFor="let a of animalList">
       <img style="width: 100px !important;height: 100px;" src="{{a.foto}}"/>  
@@ -28,13 +27,6 @@
           <button ion-button clear small color="primary" icon-start (click)="editar(a)">
             <ion-icon name='ios-create'></ion-icon>
             Editar Pedido
-          </button>
-        </ion-col>
-
-        <ion-col>
-          <button ion-button clear small color="danger"icon-start (click)="arquivar()">
-            <ion-icon name='md-archive'></ion-icon>
-            Arquivar
           </button>
         </ion-col>
       </ion-row>
